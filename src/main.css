@@ -1,0 +1,24 @@
+body {
+  @apply max-h-screen overflow-hidden transition-all bg-blurple-discord-50;
+}
+.nailed {
+  margin-left: -19px !important;
+  margin-top: 61px;
+}
+.banner {
+  height: 140px;
+  overflow: hidden;
+  position: relative;
+  z-index: 0;
+  display: inline-block;
+}
+
+hr {
+  border: thin solid hsla(0, 0%, 100%, 0.103);
+  border-radius: 50px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.profile-image {
+  z-index: 1;
+}
