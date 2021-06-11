@@ -2,7 +2,7 @@ import { forwardRef, useEffect, useMemo, useState } from "react";
 import Bravery from "../components/icons/Bravery";
 import Nitro from "../components/icons/Nitro";
 import Github from "../components/icons/Github";
-import Links from "../components/icons/Links";
+import Twitter from "../components/icons/Twitter";
 import Twitch from "../components/icons/Twitch";
 import { Presence } from "../types/lanyard";
 import { motion } from "framer-motion";
@@ -90,15 +90,29 @@ const Home = (
       <motion.div initial="hidden" animate="visible" variants={config}>
         <div className="flex items-center">
           <div className="container px-2 py-4 mx-auto my-auto text-white mobile:w-full md:w-full lg:w-7/12 xl:w-">
-            <div className="my-60">
+            <div className="my-40">
               <div className="container relative flex flex-col">
                 <div className="absolute ml-6 profile-image">
-                  <div className="flex bg-blue-900 z-1"></div>
+                  <div className="flex z-1"></div>
                   <img
                     draggable="false"
                     src={`https://cdn.discordapp.com/avatars/${discordId}/${doing?.discord_user.avatar}?size=2048`}
                     className="mt-20 rounded-full shadow-md w-28"
                   />
+
+                  {doing?.discord_status === "online" ? (
+                    <>
+                      <div className="flex space-x-1">
+                        <div className="inline-block w-5 h-5 bg-red-500 rounded-full" />
+                      </div>
+                    </>
+                  ) : (
+                    <>
+                      <div className="flex ml-20 -mt-5 space-x-1">
+                        <div className="inline-block w-5 h-5 bg-orange-400 rounded-full" />
+                      </div>
+                    </>
+                  )}
                 </div>
                 <div className="w-full h-full bg-gray-800 rounded-t-lg banner"></div>
                 <div className="pt-16 bg-gray-900 rounded-b-lg">
@@ -107,14 +121,17 @@ const Home = (
                       <div className="w-full px-2 overflow-hidden sm:w-1/2">
                         <div className="flex flex-col">
                           <div className="flex flex-row break-all">
-                            <button className="mr-1 break-letters focus:outline-none">
+                            <a
+                              href={`https://discord.com/users/${discordId}`}
+                              className="mr-1 break-letters focus:outline-none"
+                            >
                               <span className="text-2xl font-bold text-white">
                                 {doing?.discord_user.username}
                               </span>
                               <span className="text-lg font-medium text-gray-400">
                                 #{doing?.discord_user.discriminator}
                               </span>
-                            </button>
+                            </a>
                             <span className="inline-flex items-center mt-1">
                               <span className="px-1 badge">
                                 <span className="text-lg text-blue-500 fill-current BaseIcon fad fa-badge-check"></span>
@@ -134,47 +151,60 @@ const Home = (
                     </div>
                     <div className="mb-6">
                       <div className="mt-4 text-left text-white">
-                        <div className="flex flex-wrap overflow-hidden">
+                        <div className="flex flex-col flex-wrap overflow-hidden">
                           <div className="w-1/2 my-2 overflow-hidden lg:w-1/3">
-                            <div className="flex w-48 h-10 pt-1 pl-2 border border-gray-700 rounded-sm">
-                              <div className="flex space-x-2">
-                                <span className="space-x-2 fill-current">
-                                  <span className="mr-2 BaseIcon far fa-location-arrow">
+                            <div className="flex w-48 h-10">
+                              <div className="flex space-x-1 space-y-1">
+                                <span className="space-x-1 fill-current">
+                                  <span className="mr-2">
                                     <Github />
                                   </span>
                                 </span>
-                                <span className="items-center mt-1 space-x-1 font-normal text-md">
-                                  Github
-                                </span>
-                              </div>
-                              <div className="flex ml-16 space-x-10">
                                 <a
                                   href="https://github.com/imveny"
                                   target="_blank"
                                 >
-                                  <Links />
+                                  <span className="items-center pt-3 space-y-1 font-normal text-md">
+                                    Github
+                                  </span>
                                 </a>
                               </div>
                             </div>
                           </div>
                           <div className="w-1/2 my-2 overflow-hidden lg:w-1/3">
-                            <div className="flex w-48 h-10 pt-1 pl-2 border border-gray-700 rounded-sm">
+                            <div className="flex w-48 h-10">
+                              <div className="flex space-x-1 space-y-1">
+                                <span className="space-x-1 fill-current">
+                                  <span className="mr-2">
+                                    <Twitter />
+                                  </span>
+                                </span>
+                                <a
+                                  href="https://twitter.com/fuckthisimoutd"
+                                  target="_blank"
+                                >
+                                  <span className="items-center pt-3 space-y-1 font-normal text-md">
+                                    Twitter
+                                  </span>
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                          <div className="w-1/2 my-2 overflow-hidden lg:w-1/3">
+                            <div className="flex w-48 h-10">
                               <div className="flex space-x-2">
                                 <span className="pt-1 mb-1 space-x-2 fill-current">
-                                  <span className="mr-2 BaseIcon far fa-location-arrow">
+                                  <span className="mr-2">
                                     <Twitch />
                                   </span>
                                 </span>
-                                <span className="items-center mt-1 space-x-1 font-normal text-md">
-                                  lefakeveny
-                                </span>
-                              </div>
-                              <div className="flex ml-10 space-x-10">
                                 <a
                                   href="https://www.twitch.tv/isveny"
                                   target="_blank"
                                 >
-                                  <Links />
+                                  <span className="items-center space-x-1 font-normal text-md">
+                                    lefakeveny
+                                  </span>
                                 </a>
                               </div>
                             </div>
