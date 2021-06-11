@@ -100,16 +100,20 @@ const Home = (
                     className="mt-20 rounded-full shadow-md w-28"
                   />
 
-                  {doing?.discord_status === "online" ? (
+                  {doing?.discord_status == "online" ? (
                     <>
-                      <div className="flex space-x-1">
-                        <div className="inline-block w-5 h-5 bg-red-500 rounded-full" />
+                      <div className="flex ml-20 -mt-5 space-x-1">
+                        <div className="w-20 h-10 bg-gray-900 rounded-full">
+                          <div className="inline-block w-5 h-5 bg-red-500 rounded-full" />
+                        </div>
                       </div>
                     </>
                   ) : (
                     <>
                       <div className="flex ml-20 -mt-5 space-x-1">
-                        <div className="inline-block w-5 h-5 bg-orange-400 rounded-full" />
+                        <div className="w-20 h-10 bg-gray-900 rounded-full">
+                          <div className="inline-block w-5 h-5 bg-orange-400 rounded-full" />
+                        </div>
                       </div>
                     </>
                   )}
