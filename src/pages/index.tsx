@@ -153,12 +153,12 @@ const Home = (
                         </div>
                       </div>
                     </div>
-                    <div className="mb-6">
-                      <div className="mt-4 text-left text-white">
-                        <div className="flex flex-col flex-wrap overflow-hidden">
-                          <div className="w-1/2 my-2 overflow-hidden lg:w-1/3">
-                            <div className="flex w-48 h-10">
-                              <div className="flex space-x-1 space-y-1">
+                    <div className="mb-6 space-x-2">
+                      <div className="mt-4 space-x-2 text-left text-white">
+                        <div className="flex flex-wrap ml-2 overflow-hidden">
+                          <div className="my-2 space-x-2 overflow-hidden transition duration-150 transform hover:scale-75">
+                            <div className="flex h-10">
+                              <div className="flex space-x-1">
                                 <span className="space-x-1 fill-current">
                                   <span className="mr-2">
                                     <Github />
@@ -168,16 +168,16 @@ const Home = (
                                   href="https://github.com/imveny"
                                   target="_blank"
                                 >
-                                  <span className="items-center pt-3 space-y-1 font-normal text-md">
+                                  <span className="items-center pt-2 font-normal text-md">
                                     Github
                                   </span>
                                 </a>
                               </div>
                             </div>
                           </div>
-                          <div className="w-1/2 my-2 overflow-hidden lg:w-1/3">
-                            <div className="flex w-48 h-10">
-                              <div className="flex space-x-1 space-y-1">
+                          <div className="my-2 ml-5 overflow-hidden transition duration-150 transform hover:scale-75">
+                            <div className="flex h-10">
+                              <div className="flex space-x-1">
                                 <span className="space-x-1 fill-current">
                                   <span className="mr-2">
                                     <Twitter />
@@ -187,15 +187,15 @@ const Home = (
                                   href="https://twitter.com/fuckthisimoutd"
                                   target="_blank"
                                 >
-                                  <span className="items-center pt-3 space-y-1 font-normal text-md">
+                                  <span className="items-center pt-3 font-normal text-md">
                                     Twitter
                                   </span>
                                 </a>
                               </div>
                             </div>
                           </div>
-                          <div className="w-1/2 my-2 overflow-hidden lg:w-1/3">
-                            <div className="flex w-48 h-10">
+                          <div className="my-2 mb-1 ml-5 overflow-hidden transition duration-150 transform hover:scale-75">
+                            <div className="flex h-10">
                               <div className="flex space-x-2">
                                 <span className="pt-1 mb-1 space-x-2 fill-current">
                                   <span className="mr-2">
