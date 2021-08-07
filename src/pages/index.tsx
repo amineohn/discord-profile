@@ -87,8 +87,7 @@ const Home = (
   if (!doing || !doing?.discord_status) return null;
   return (
     <>
-      <motion.div initial="hidden" animate="visible" variants={config}>
-        <div className="flex items-center">
+      <motion.div className="flex items-center" initial="hidden" animate="visible" variants={config}>
           <div className="container px-2 py-4 mx-auto my-auto text-white mobile:w-full md:w-full lg:w-7/12 xl:w-">
             <div className="my-40">
               <div className="container relative flex flex-col">
@@ -221,7 +220,6 @@ const Home = (
               </div>
             </div>
           </div>
-        </div>
       </motion.div>
     </>
   );
